@@ -1,81 +1,47 @@
-# Relatórios Obrigatrórios no mercado de Capitais Brasileiro
+# Relatórios Obrigatórios no mercado de Capitais Brasileiro
 <!-- Descrição curta sobre o que seu projeto faz. -->
 > Programa desenvolvido em python para download de arquivos não estruturados listados na CVM
 
 [![ITA](fico.png)](https://fico-ita.github.io/)
 [![Python Version](https://img.shields.io/badge/python-3.8-blue)](https://www.python.org/downloads/release/python-380/)
+[![CVM](cvm2.png)](https://dados.cvm.gov.br/)
 
 <!--
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 -->
+#
+Com o aumento significativo de empresas listadas no mercado acionário e a modernização dos sistemas de informação, houve um aumento também no volume de informações disponíveis para análises de empresas. A maioria destes dados não estruturados em formato de textos e muitas vezes têm informações valiosas, estudos anteriores indicam que os relatórios financeiros além de refletir informações do passado, também contém informações sobre o desempenho futuro (Zhang et al 2018). A utilização de dados textuais para melhorar a modelagem da dinâmica do mercado financeiro tem sido a tradição da prática comercial.
+Neste trabalho proponho uma estrutura de extração de dados não estruturados como relatórios financeiros, press releases, atas de assembleias entre outros apresentada pelas à Comissão de Valores Mobiliários (CVM) pelas empresas listadas na B3.
+#
+## Descrição e análise do problema
+#
+O regulador responsável pelo mercado de capitais brasileiro é a Comissão de Valores Mobiliários (CVM). As empresas nela cadastradas são obrigadas a divulgarem regularmente relatórios financeiros e não financeiros relativos ao seu exercício. Esses relatórios estão arquivados na CVM.
+Pesquisas mostram que as empresas listadas do segmento Nível 1 e 2 de Governança Corporativa são as que mais possuem publicações de relatórios nos últimos 5 anos, devido ao ato nível e exigibilidade de divulgações (Checon et al. 2021).
+#
+|![Número de relatórios divulgados por segmentos](numrelatorios.png)|
+|:--|
+|Fonte: elaborado por Checon et al. 2021|
+#
+Algumas categorias de relatórios tem um volume alto de divulgação, como por exemplo os relatórios relacionados à assembleias (convocação de assembleias e ATAS), comunicados ao mercado e aviso aos acionistas devido a quantidade de eventos relacionados.
+Os Dados Econômico-financeiros e  Formulário de referencia possuem um volume alto devido a reapresentação.
+Para esta proposta foi focado inicialmente na extração de uma amostra de relatórios com mais publicações- empresas de do setor bancário pertencente ao Nível 1 de Governança, do setor bancário.
+#
 
-De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
+![Levantamento de arqivos](levantamento-arquivos.png)
+#
+
+## Projetos similares
 
 
-## Instalação
+- [BrazilianMarketDataAPI](https://github.com/gustavomoers/BrazilianMarketDataAPI)
+- [fundspy](https://github.com/joaopm33/fundspy)
+ - [Pegando DRE do repositório da CVM](https://gist.github.com/Vido/cbc33862dd27a22790df633f1d113ae6)
 
-OS X & Linux:
 
-```sh
-npm install my-crazy-module --save
-```
+#
+## Bibliografia
 
-Windows:
+Checon, Bianca Q., Santana, Verônica de F., Relatórios Obrigatórios e Padrôes de Divulgação no Mercado de Capitais. Artigo Cíclico n°8. FGV EASP Instituto de finanças
 
-```sh
-edit autoexec.bat
-```
-
-## Exemplo de uso
-
-Alguns exemplos interessantes e úteis sobre como seu projeto pode ser utilizado. Adicione blocos de códigos e, se necessário, screenshots.
-
-_Para mais exemplos, consulte a [Wiki][wiki]._ 
-
-## Configuração para Desenvolvimento
-
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
-
-```sh
-make install
-npm test
-```
-
-## Histórico de lançamentos
-
-* 0.2.1
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1
-    * Trabalho em andamento
-
-## Meta
-
-Seu Nome – [@SeuNome](https://twitter.com/...) – SeuEmail@exemplo.com
-
-Distribuído sob a licença XYZ. Veja `LICENSE` para mais informações.
-
-[https://github.com/yourname/github-link](https://github.com/othonalberto/)
-
-## Contributing
-
-1. Faça o _fork_ do projeto (<https://github.com/yourname/yourproject/fork>)
-2. Crie uma _branch_ para sua modificação (`git checkout -b feature/fooBar`)
-3. Faça o _commit_ (`git commit -am 'Add some fooBar'`)
-4. _Push_ (`git push origin feature/fooBar`)
-5. Crie um novo _Pull Request_
-
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/seunome/seuprojeto/wiki
+Zhang, X., Tan, Y. (2018). Deep Stock Ranker: A LSTM Neural Network Model for Stock Selection. In: Tan, Y., Shi, Y., Tang, Q. (eds) Data Mining and Big Data. DMBD 2018. Lecture Notes in Computer Science(), vol 10943. Springer, Cham. https://doi.org/10.1007/978-3-319-93803-5_58
