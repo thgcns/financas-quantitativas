@@ -25,12 +25,17 @@ Pesquisas mostram que as empresas listadas do segmento Nível 1 e 2 de Governan�
 #
 Algumas categorias de relatórios tem um volume alto de divulgação, como por exemplo os relatórios relacionados à assembleias (convocação de assembleias e ATAS), comunicados ao mercado e aviso aos acionistas devido a quantidade de eventos relacionados.
 Os Dados Econômico-financeiros e  Formulário de referencia possuem um volume alto devido a reapresentação.
-Para esta proposta foi focado inicialmente na extração de uma amostra de relatórios com mais publicações- empresas de do setor bancário pertencente ao Nível 1 de Governança, do setor bancário.
-#
 
+
+A proposta para este projeto é a construção de um pipeline de dados para download de arquivos da cvm:
+#
+![programa para download](desenho-download.png)
+
+
+O pipeline foi direcionado a empresas  do setor bancário pertencente ao Nível 1 de Governança por possuir um maior nivel de publicações:
+#
 ![Levantamento de arqivos](levantamento-arquivos.png)
 #
-
 ## Projetos similares
 
 
