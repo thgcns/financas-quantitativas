@@ -1,0 +1,21 @@
+name: nlp_finance
+channels:
+  - defaults
+dependencies:
+  - pip=22.0
+  - torch==1.9.0
+  - numpy=1.21.2
+  - transformers==4.10.2
+  - sentencepiece==0.1.96
+  - Tensorflow
+  - spacy=2.0.16
+  - keras
+  
+
+  - matplotlib=3.0.1
+  - pandas=0.23.4
+  - nltk=3.3.0
+  - scikit-learn=1.0.2
+  - jupyter=1.0.0
+
+prefix: C:\Users\Marcial\Anaconda3\envs\nlp_finance
